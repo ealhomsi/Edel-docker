@@ -1,0 +1,57 @@
+#navbar-container {
+	color: black;
+	min-width: 250px;
+	width: 100%;
+	max-height: 69px;
+}
+
+#navbar-container #navbar-background{
+	min-width: 250px;
+	width: 100%;
+	max-height: 69px;
+}
+
+#navbar-container, #menu-bar ul{
+	list-style-type: none;
+
+}
+
+#navbar-container #menu-bar {
+	margin-right: 1.5em;
+	float:right;
+}
+
+#navbar-container #menu-bar li {
+	float:left;
+	margin-top:0.7em;
+	display:inline-block;
+}
+
+
+#navbar-container #logo {
+	float:left;
+	font-size: 1.5em;
+	padding: none;
+}
+
+#navbar-container .selectedMenu {
+	color: white;
+	font-weight:bolder;
+}
+
+#navbar-container #last-menu {
+	margin-right: 6em;
+}
+
+#navbar-container .w3-button:hover {
+	text-decoration: none;
+}
+#navbar-container .action-button {
+	width:auto;
+	border-width:0px;
+	margin-right: 1.5em;
+}
+
+#navbar-container .fa-search {
+	color:white;
+}

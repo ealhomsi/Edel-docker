@@ -1,0 +1,749 @@
+@media only screen and (max-width: 2960px) {
+	body{
+		min-width:300px;
+		width: auto !important;
+		width:300px;
+	}
+
+	#ABsubSlogan2 {
+		color: black;
+		text-align: center;
+		display: block;
+		margin: auto 0;
+		width: 100%;
+		margin-top: 3em;
+		opacity: 0.99;
+		font-size: 1em;
+	}
+
+
+	.buttonsMenu {
+		background-color: white;
+		color: #2dd0c6;
+		border-radius: 2em;
+		margin-top: 1.3em;
+		margin-right: 1em;
+		position: absolute;
+		padding: 0.2em 0.7em;
+	}
+
+	.contentbar {
+		margin-top: 3em;
+		border-radius: 0.3em;
+	}
+
+	.downloadAppImages {
+		width: 7em;
+		opacity: 0.99;
+	}
+	.downloadApp {
+		padding-top: 1.5em;
+		display:inline-block;
+		text-align: center;
+		width: 100%;
+	}
+	.width100 {
+		width: 100%;
+	}
+
+	.width50{
+		width: 50%
+	}
+
+	.fortyto100{
+		width: 40%;
+
+	}
+
+	.fiftyto100{
+		width: 50%;
+
+	}
+	.width25to50{
+		width: 25%;
+	}
+
+	.centerText{
+		text-align: center;
+	}
+
+	.shape1{
+		position: absolute;
+		left:0;
+		margin-top: -2em;
+	}
+	.shape3{
+		style="fill:#7595cd;
+	}
+
+	form {
+		padding: 1em;
+	}
+
+	form input {
+		padding: 0em 0.1em;
+	}
+
+	polygon {
+		fill:#7595cd;
+		width: 100%;
+	}
+
+	#Background1{
+		position: absolute;
+		left:0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	#Background2{
+		position: absolute;
+		left:0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.blackheader{
+		color: black;
+		text-align: center;
+		margin: auto 0;
+		width: 100%;
+		font-weight: bold;
+		opacity: 0.99;
+	}
+
+	.circle {
+		position: absolute;
+		margin-right:50%
+	}
+
+	.pic {
+		position: absolute;
+		width:40px;
+		margin: 2em 0em 1em 2em;
+	}
+
+	.floatRight {
+		float:right;
+	}
+
+	.floatLeft{
+		float: left;
+	}
+
+	#navDemo{
+		margin-top:46px;
+
+	}
+
+	.centered{
+		text-align:center;
+	}
+
+	.contentBox{
+		width: 100%;
+		height: 16em;
+	}
+
+
+	.quoter{
+		margin-left:2.5em;
+		font-size: 15px;
+		color: white;
+	}
+
+	.div2{
+		margin:0 -16px 8px 13px;
+	}
+
+	.margin3em{
+		margin:3em;
+	}
+
+	.p3{
+		color: white;
+		margin: auto 0;
+		font-weight: bold;
+	}
+	.width30px{
+		width:30px;
+	}
+
+	.maxWidth800{
+		max-width:800px;
+	}
+
+	#abBoot1{
+			width: 100%;
+		}
+	#abBoot2{
+		width: 100%;
+	}
+
+		#abBand{
+
+		}
+
+	#quote{
+		color:white;
+		margin-left:2em;
+		font-size: 20px;
+	}
+
+		#boot3{
+			color:white;
+			margin-left:2em;
+			font-size: 20px;
+		}
+
+	.name{
+		margin-top: -25px;
+		margin-left: -8px;
+	}
+
+	.email{
+		margin-top: -25px;
+		margin-left: 8px;
+	}
+
+	.message{
+		margin-top: 20px;
+		height:15em;
+	}
+
+	.send{
+
+	}
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+
+	body{
+
+		width: auto !important;
+		width:300px;
+	}
+
+	#splashScreen {
+		width: 100%;
+		margin-top: -20px;
+		height: 27em;
+		background-color: #2dd0c6;
+	}
+
+	.newStyle {
+		display: block;
+	}
+
+	#imgSplashScreen {
+		position: absolute;
+		width: 100%;
+		height: 27em;
+		opacity: 0.3;
+	}
+
+
+	#slogan {
+		color: white;
+		text-align: center;
+		display: block;
+		margin: auto 0;
+		width: 100%;
+		padding-top: 5.5em;
+		font-weight: bold;
+		opacity: 0.99;
+	}
+
+
+
+	#ABsubSlogan2 {
+		color: black;
+		text-align: center;
+		display: block;
+		margin: auto 0;
+		width: 100%;
+		padding-top: 0.4em;
+		font-weight: bold;
+		opacity: 0.99;
+		font-size: 1em;
+	}
+
+	#header2{
+		color: white;
+		text-align: center;
+		margin: auto 0;
+		margin-top:1em;
+		width: 100%;
+		font-weight: bold;
+		font-size: 1.8em;
+
+	}
+
+	.buttonsMenu {
+		background-color: white;
+		color: #2dd0c6;
+		border-radius: 2em;
+		margin-top: 1.3em;
+		margin-right: 1em;
+		position: absolute;
+		padding: 0.2em 0.7em;
+	}
+
+	.contentbar {
+		margin-top: 3em;
+		border-radius: 0.3em;
+	}
+
+	.downloadAppImages {
+		width: 7em;
+		opacity: 0.99;
+	}
+	.downloadApp {
+		padding-top: 1.5em;
+		display:inline-block;
+		text-align: center;
+		width: 100%;
+	}
+	.width100 {
+		width: 100%;
+	}
+
+	.width50{
+		width: 50%
+	}
+
+	.fortyto100{
+		width: 40%;
+
+	}
+
+	.fiftyto100{
+		width: 50%;
+
+	}
+	.width25to50{
+		width: 25%;
+	}
+
+	.centerText{
+		text-align: center;
+	}
+
+	.shape1{
+		position: absolute;
+		margin-top: 0.5em;
+		left:0;
+	}
+	.shape3{
+		style="fill:#7595cd;
+	}
+
+	form {
+		padding: 1em;
+	}
+
+	form input {
+		padding: 0em 0.1em;
+	}
+
+	polygon {
+		fill:#7595cd;
+		width: 100%;
+	}
+
+	#Background1{
+		position: absolute;
+		left:0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	#Background2{
+		position: absolute;
+		left:0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.blackheader{
+		color: black;
+		text-align: center;
+		margin: auto 0;
+		width: 100%;
+		font-weight: bold;
+		opacity: 0.99;
+	}
+
+	.circle {
+		position: absolute;
+		margin-right:50%
+	}
+
+	.pic {
+		position: absolute;
+		width:40px;
+		margin: 2em 0em 1em 2em;
+	}
+
+	.floatRight {
+		float:right;
+	}
+
+	.floatLeft{
+		float: left;
+	}
+
+	#navDemo{
+		margin-top:46px;
+
+	}
+
+	.centered{
+		text-align:center;
+	}
+
+	.contentBox{
+		width: 100%;
+		height: 16em;
+	}
+
+
+	.quoter{
+		margin-top: -10px;
+		font-size:15px;
+		color: white;
+	}
+
+	.div2{
+		margin:0 -16px 8px 13px;
+		width: 30em;
+	}
+
+	.margin3em{
+		margin:3em;
+	}
+
+	.p3{
+		color: white;
+		margin: auto 0;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.width30px{
+		width:30px;
+	}
+
+	.maxWidth800{
+		max-width:800px;
+	}
+
+	#abBoot1{
+			width: 100%;
+		}
+	#abBoot2{
+		width: 100%;
+	}
+
+		#abBand{
+
+		}
+
+	#quote{
+		color:white;
+		margin-top: 5px;
+		margin-left:2em;
+		font-size: 20px;
+	}
+
+	#boot3{
+		color:white;
+		margin-top: 5px;
+		margin-left:2em;
+		font-size: 20px;
+	}
+
+	.name{
+		margin-top: -25px;
+		margin-left: -8px;
+	}
+
+	.email{
+		margin-top: -25px;
+		margin-left: 8px;
+	}
+
+	.message{
+		margin-top: 20px;
+		height:10em;
+	}
+
+	.send{
+
+	}
+
+
+}
+
+@media only screen and (max-width: 900px) {
+
+	body{
+		min-width:300px;
+		width: auto !important;
+		width:300px;
+	}
+
+	#splashScreen {
+		width: 100%;
+		margin-top: -20px;
+		height: 27em;
+		background-color: #2dd0c6;
+	}
+
+	.newStyle {
+		display: block;
+	}
+
+	#imgSplashScreen {
+		position: absolute;
+		width: 100%;
+		height: 27em;
+		opacity: 0.3;
+	}
+
+
+
+	#ABsubSlogan2 {
+		color: black;
+		text-align: center;
+		display: block;
+		margin: auto 0;
+		width: 100%;
+		padding-top: 0.4em;
+		font-weight: bold;
+		opacity: 0.99;
+		font-size: 0.8em;
+	}
+
+	#header2{
+		color: white;
+		text-align: center;
+		margin: auto 0;
+		margin-top:1em;
+		width: 100%;
+		font-weight: bold;
+		font-size: 1.2em;
+
+	}
+
+	.buttonsMenu {
+		background-color: white;
+		color: #2dd0c6;
+		border-radius: 2em;
+		margin-top: 1.3em;
+		margin-right: 1em;
+		position: absolute;
+		padding: 0.2em 0.7em;
+	}
+
+	.contentbar {
+		margin-top: 3em;
+		border-radius: 0.3em;
+	}
+
+	.downloadAppImages {
+		width: 7em;
+		opacity: 0.99;
+	}
+	.downloadApp {
+		padding-top: 1.5em;
+		display:inline-block;
+		text-align: center;
+		width: 100%;
+	}
+	.width100 {
+		width: 100%;
+	}
+
+	.width50{
+		width: 50%
+	}
+
+	.fortyto100{
+		width: 40%;
+
+	}
+
+	.fiftyto100{
+		width: 50%;
+
+	}
+
+	.width25to50{
+		width: 25%;
+	}
+
+	.centerText{
+		text-align: center;
+	}
+
+	.shape1{
+		position: absolute;
+		margin-top: 0em;
+		left:0;
+	}
+	.shape3{
+		style="fill:#7595cd;
+	}
+
+	form {
+		padding: 1em;
+	}
+
+	form input {
+		padding: 0em 0.1em;
+	}
+
+	polygon {
+		fill:#7595cd;
+		width: 100%;
+	}
+
+	#Background1{
+		position: absolute;
+		left:0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	#Background2{
+		position: absolute;
+		left:0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.blackheader{
+		color: black;
+		text-align: center;
+		margin: auto 0;
+		width: 100%;
+		font-weight: bold;
+		opacity: 0.99;
+	}
+
+	.circle {
+		position: absolute;
+		margin-right:50%
+	}
+
+	.pic {
+		position: absolute;
+		width:40px;
+		margin: 2em 0em 1em 2em;
+	}
+
+	.floatRight {
+		float:right;
+	}
+
+	.floatLeft{
+		float: left;
+	}
+
+	#navDemo{
+		margin-top:46px;
+
+	}
+
+	.centered{
+		text-align:center;
+	}
+
+	.contentBox{
+		width: 100%;
+		height: 16em;
+	}
+
+
+	.quoter{
+		margin-top: -10px;
+		font-size:15px;
+		color: white;
+	}
+
+	.div2{
+		margin:0 -16px 8px 13px;
+		width: 30em;
+	}
+
+	.margin3em{
+		margin: 0em;
+		margin-left: 4em;
+	}
+
+	.p3{
+		color: white;
+		margin: auto 0;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.width30px{
+		width:30px;
+	}
+
+	.maxWidth800{
+		max-width:800px;
+	}
+
+	#abBoot1{
+			width: 100%;
+		}
+	#abBoot2{
+		width: 100%;
+	}
+
+		#abBand{
+
+		}
+
+	#quote{
+		color:white;
+		margin-top: 5px;
+		margin-left:2em;
+		font-size: 20px;
+	}
+
+		#boot3{
+			color:white;
+			margin-top: 5px;
+			margin-left:2em;
+			font-size: 20px;
+		}
+
+	.name{
+		margin-top: -25px;
+		margin-left: -8px;
+	}
+
+	.email{
+		margin-top: -25px;
+		margin-left: 8px;
+	}
+
+	.message{
+		margin-top: 20px;
+		height:6em;
+	}
+
+	.send{
+
+	}
+
+	.contactInfo{
+		margin-top: -2em;
+	}
+
+
+}
