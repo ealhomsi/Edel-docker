@@ -1,8 +1,11 @@
 # our base image
-FROM tutum/apache-php:latest
+FROM php:7.0-apache
 
 # tell the port number the container should expose
 EXPOSE 80 443
+
+# copy code to the directory
+COPY src/ /var/www/html/
 
 # Install python and pip
 RUN apk add --update py2-pip
@@ -21,3 +24,6 @@ COPY templates/index.html /usr/src/app/templates/
 
 # run the application
 CMD ["python", "/usr/src/app/app.py"]
+
+
+
