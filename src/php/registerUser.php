@@ -8,7 +8,7 @@
 <?php
 function main() {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn =connectToDatabase();
 
 	// fetch credentials through post	
 	$user =  "";

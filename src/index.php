@@ -1,6 +1,7 @@
-`<?php
-//init
+<?php
 session_start();
+
+//init
 include  "php/functions.php";
 ?>
 
@@ -66,7 +67,7 @@ include  "php/functions.php";
 			<div class="w3-row w3-padding-32">
 
 				<div class="row">
-					<a href="tagPages.php?tagID=1">
+					<a href="pages/tagPages.php?tagID=1">
 					<div class="col-sm-4 floatLeft width33">
 						<img class="pic" src="images/home.png" alt="Random Name">
 						<svg height="100" width="100">
@@ -75,7 +76,7 @@ include  "php/functions.php";
 					</div> </a>
 
 
-					<a href="tagPages.php?tagID=2">
+					<a href="pages/tagPages.php?tagID=2">
 					<div class="col-sm-4 floatLeft width33">
 						<img class="pic" src="images/kit.png" alt="Random Name">
 						<svg height="100" width="100">
@@ -83,7 +84,7 @@ include  "php/functions.php";
 						</svg>
 					</div></a>
 
-					<a href="tagPages.php?tagID=3">
+					<a href="pages/tagPages.php?tagID=3">
 					<div class="col-sm-4 floatRight width33">
 						<img class="pic" src="images/books.png" alt="Random Name">
 						<svg height="100" width="100">
@@ -118,18 +119,21 @@ include  "php/functions.php";
 
 					<div class="w3-container w3-content w3-center w3-padding-64 maxWidth800" id="band">
 
+     					<br>
 
 						<div class="col-sm-5 floatLeft">
 							<h3 class="blackeader">Connect with a community of peers and experts</h3>
 
 								<h4 id="subSlogan2"> With this tool, you can get directed to the proper organisations that seek to help you.
-									To find out why NGO's recommend our service <a href="pages/aboutUs.php"> click here!</a> </h4>
+									To find out why NGO's recommend our service <a href="pages/aboutus.php"> click here!</a> </h4>
 								</div>
 								<div class="col-sm-7 floatRight" id="boot1">
 									<img src="images/forum.png" alt="forum" id="deskforum">
 
 								</div>
 						</div>
+     					<br>
+     					<br>
 
 	</div>
 
@@ -138,6 +142,7 @@ include  "php/functions.php";
 							<svg class="shape1" xmlns="http://www.w3.org/2000/svg" viewBox="0 50 448 190" id="Background2"><title>testshape</title>
 								<polygon class="shape3" points="448 200 0 215 0 0 448 0 448 200" />
 								<div class="row">
+			     					<br>
 
 									<p id="boot3"> <strong> CONTACT <strong></p>
 									<p class="p2"><strong>If you have any question or comments you would like to share with us, feel free to reach out to us!</strong></p>
@@ -152,7 +157,7 @@ include  "php/functions.php";
 													<div class="w3-half">
 														<input class="email w3-input w3-border" type="text" placeholder="Email" required name="Email">
 													</div>
-													<input class="message w3-input w3-border" type="text" placeholder="Message" required name="Message">
+													<input class="message w3-input w3-border" type="text" required name="Message">
 
 												<button class="send w3-button w3-black w3-section w3-left" type="submit">SEND</button>
 											</div>

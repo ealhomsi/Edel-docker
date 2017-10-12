@@ -1,6 +1,7 @@
 <?php 
-//init
 session_start();
+//init
+
 include  "functions.php";
 
 if(!isset($_SESSION['userID'])) {
@@ -36,7 +37,7 @@ function main() {
     echo $phptime;
    	echo $postTags;
     //inserting
-    $conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+    $conn =connectToDatabase();
 
     //building querry to the database
     $dbQuery = "INSERT INTO Posts (user_id, post_type, post_date, post_text, post_rating) VALUES ('" . mysqli_real_escape_string($conn, $_SESSION['userID']) . "', '" . mysqli_real_escape_string($conn, $postType) ."', FROM_UNIXTIME('" . $phptime ."'), '". mysqli_real_escape_string($conn, $postText)  ."', 1)";
@@ -58,7 +59,7 @@ function main() {
 
 
     //inserting
-    $conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+    $conn =connectToDatabase();
 
     //building a querry
     $dbQuery = "INSERT INTO ChildrenPosts (child_post_id) VALUES (" . mysqli_real_escape_string($conn, $lastID) .")";

@@ -22,8 +22,6 @@
     <!-- navbar -->
     <?php include '../template/navbar-non-index.php' ?>
 
-
-
     <br>
 
      <!-- Querry the database for all posts listed in those tags-->

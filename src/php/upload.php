@@ -53,7 +53,7 @@ function main() {
             
 
                 //inserting
-                $conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+                $conn =connectToDatabase();
                 $result = $conn->query($dbQuery);
 
                 if(!$result) {

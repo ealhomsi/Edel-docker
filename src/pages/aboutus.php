@@ -10,10 +10,6 @@ include  "../php/functions.php";
   <title>EDEL</title>
   <?php include '../template/includes-non-index.html' ?>
 
-  <style>
-    body {
-    }
-  </style>
 </head>
 
 <body>
@@ -74,10 +70,10 @@ include  "../php/functions.php";
       <polygon class="shape3" points="448 130 0 125 0 0 448 0 448 200" />
       <div class="row">
 
-        <div class="w3-row w3-padding-32">
+        <div class="w3-row w3-padding-32" style="text-align:center;">
 
-          <p id="quote"> <strong> "INSERT QUOTE" <strong></p>
-            <p class="quoter"><strong> <i> -INSERT NAME </i></strong></p>
+          <p id="quote"> <strong> "I love this website! It has changed my life" <strong></p>
+            <p class="quoter"><strong> <i> Elias Al Homsi </i></strong></p>
 
 
 
@@ -93,14 +89,13 @@ include  "../php/functions.php";
       <br> <br>
       <h3 class="blackheader">Our goal </h3>
 
-      <h4 id="ABsubSlogan2"> Lorem ipsum dolor sit amet,.<br>
-        Lorem ipsum dolor sit amet,.<br>
-        Lorem ipsum dolor sit amet,.<br>
-        Lorem ipsum dolor sit amet,.<br>
-        Lorem ipsum dolor sit amet,.<br>
-        Lorem ipsum dolor sit amet,.<br>
-        Lorem ipsum dolor sit amet,.<br> <br> <br>
-      </h4>
+      <br>
+      <br>
+      <video controls style="width:100%">
+          <source src="../assets/Compass-Video-Final.mp4">
+      </video>
+      <br>
+      <br>
     </div>
 
 
@@ -108,6 +103,7 @@ include  "../php/functions.php";
       <svg class="shape1" xmlns="http://www.w3.org/2000/svg" viewBox="0 50 448 190" id="Background2"><title>testshape</title>
         <polygon class="shape3" points="448 200 0 215 0 0 448 0 448 200" />
         <div class="row">
+         <br>
 
           <p id="boot3"> <strong> CONTACT <strong></p>
             <p class="p2"><strong>If you have any question or comments you would like to share with us, feel free to reach out to us!</strong></p>
@@ -122,7 +118,7 @@ include  "../php/functions.php";
                     <div class="w3-half">
                       <input class="email w3-input w3-border" type="text" placeholder="Email" required name="Email">
                     </div>
-                    <input class="message w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <input class="message w3-input w3-border" type="text" placeholder="" required name="Message">
 
                     <button class="send w3-button w3-black w3-section w3-left" type="submit">SEND</button>
                   </div>

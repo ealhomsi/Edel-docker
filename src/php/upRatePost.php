@@ -49,7 +49,7 @@ function main() {
     $voteValue = 1;
 
     //inserting
-    $conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+    $conn =connectToDatabase();
 
     //building querry to the database
     $dbQuery = "INSERT INTO Votes (user_id, post_id, vote_date, vote_value) VALUES ('" . mysqli_real_escape_string($conn,$_SESSION['userID']) . "', '" . mysqli_real_escape_string($conn,$postID) ."', FROM_UNIXTIME('" . mysqli_real_escape_string($conn,$phptime) ."'), ". mysqli_real_escape_string($conn,$voteValue)  .")";
@@ -72,7 +72,7 @@ function main() {
             
 
     //updating
-    $conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+    $conn =connectToDatabase();
 
     //update the rating on the post
     $dbQuery = 'UPDATE  Posts SET post_rating='. mysqli_real_escape_string($conn,$rating) .  ' WHERE post_id=' . mysqli_real_escape_string($conn,$postID) ;

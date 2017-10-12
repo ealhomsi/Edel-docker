@@ -1,6 +1,20 @@
 <?php
 // this is a library of common functions
+function connectToDatabase() {
+	$ip_addr = $_SERVER['EDEL_MYSQL_PORT_3306_TCP_ADDR'];
+	$port = $_SERVER['EDEL_MYSQL_PORT_3306_TCP_PORT'];
+	$user = $_SERVER['EDEL_MYSQL_ENV_MYSQL_USER'];
+	$password = $_SERVER['EDEL_MYSQL_ENV_MYSQL_ROOT_PASSWORD'];
 
+	$conn = new mysqli($ip_addr,$user,$password,'edel') or die('Error connecting to MySQL server.');
+
+	if ($conn->connect_error) {
+    die('Erreur de connexion (' . $mysqli->connect_errno . ') '
+            . $mysqli->connect_error);
+	}
+
+	return $conn;
+}
 //function send email to a user
 function sendmail($to, $replyer, $msg, $date) {
 	$subject = "Your post got a reply from $replyer";
@@ -60,7 +74,7 @@ function createPPKeys() {
 //function that generates salt
 function generateSalt() {
 	$numberOfDesiredBytes = 16;
-	$salt = random_bytes($numberOfDesiredBytes);
+	$salt = openssl_random_pseudo_bytes($numberOfDesiredBytes);
 	return $salt;
 }
 
@@ -88,7 +102,7 @@ function signFile($fileContent, $privKey) {
 //getting something from database Users
 function querrySomethingFromUsers($search, $which, $column) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Users WHERE ". mysqli_real_escape_string($conn,$which) ." = '".mysqli_real_escape_string($conn,$search). "'";
@@ -116,7 +130,7 @@ function querrySomethingFromUsers($search, $which, $column) {
 //getting something from database Posts
 function querrySomethingFromPosts($search, $which, $column) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Posts WHERE ". mysqli_real_escape_string($conn,$which) ." = '".mysqli_real_escape_string($conn,$search) . "'";
@@ -144,7 +158,7 @@ function querrySomethingFromPosts($search, $which, $column) {
 //getting a specific post
 function getSpecificPost($postID) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	$which = 'post_id';
 	$search = $postID;
@@ -175,7 +189,7 @@ function getSpecificPost($postID) {
 //getting something from database Posts
 function querrySomethingFromTags($search, $which, $column) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Tags WHERE ". mysqli_real_escape_string($conn,$which) ." = '".mysqli_real_escape_string($conn,$search) . "'";
@@ -203,7 +217,7 @@ function querrySomethingFromTags($search, $which, $column) {
 //getting something from database
 function querryLastPost($column) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Posts ORDER BY post_id DESC LIMIT 1";
@@ -231,7 +245,7 @@ function querryLastPost($column) {
 //getting something from database
 function querryLastTag($column) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Tags ORDER BY tag_id DESC LIMIT 1";
@@ -260,7 +274,7 @@ function querryLastTag($column) {
 //input $id is really the father post id gotton from the relation ship
 function listChildrenPosts($id) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT post_id, post_type, post_date, user_id, post_rating, post_text FROM Posts INNER JOIN ChildrenPosts ON ChildrenPosts.child_post_id = Posts.post_id WHERE father_post_id='".mysqli_real_escape_string($conn,$id). "' ORDER BY Posts.post_rating DESC";
@@ -292,7 +306,7 @@ function listChildrenPosts($id) {
 //-1 means that the user down vote the post
 function checkUserStatus($postID, $userID) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// querry the
 	// making the querry
@@ -315,7 +329,7 @@ function checkUserStatus($postID, $userID) {
 //delete the user pariticpation on a specific post
 function deleteUserParticipation($postID, $userID, $value) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "DELETE From Votes WHERE post_id=".mysqli_real_escape_string($conn,$postID). " AND user_id=". mysqli_real_escape_string($conn,$userID);
@@ -336,7 +350,7 @@ function deleteUserParticipation($postID, $userID, $value) {
    	$rating = $rating + $value;
 
    	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
     $dbQuery = 'UPDATE  Posts SET post_rating='. mysqli_real_escape_string($conn,$rating) .  ' WHERE post_id=' . mysqli_real_escape_string($conn,$postID) ;
@@ -357,7 +371,7 @@ function deleteUserParticipation($postID, $userID, $value) {
 //getting all uploaded posts
 function listPostsUser($id) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Posts WHERE user_id='".mysqli_real_escape_string($conn,$id). "' ORDER BY Posts.post_rating DESC";
@@ -388,7 +402,7 @@ function insertTag($value) {
 
 
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Tags WHERE tag_name='".mysqli_real_escape_string($conn,$value). "'";
@@ -405,7 +419,7 @@ function insertTag($value) {
 
     //if it does not exist insert it
     //connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "INSERT INTO Tags (tag_name) VALUES ('".mysqli_real_escape_string($conn,$value). "')";
@@ -426,7 +440,7 @@ function insertTag($value) {
 //tag a post
 function tagAPost($postID, $arrayOfTags) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 
 	//multiple inserts
@@ -446,7 +460,7 @@ function tagAPost($postID, $arrayOfTags) {
 //get a list of tags
 function listOfTags($postID) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM TagPosts INNER JOIN Tags ON TagPosts.tag_id = Tags.tag_id WHERE post_id='".mysqli_real_escape_string($conn,$postID). "' ORDER BY Tags.tag_name";
@@ -478,7 +492,7 @@ function listOfTags($postID) {
 //get a list of posts following a tag #listOfPostsRelatedToATag
 function listOfPostsRelatedToATag($tagID) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM TagPosts INNER JOIN Posts ON TagPosts.post_id = Posts.post_id WHERE TagPosts.tag_id='".mysqli_real_escape_string($conn,$tagID). "' ORDER BY Posts.post_rating DESC";
@@ -509,7 +523,7 @@ function listOfPostsRelatedToATag($tagID) {
 //return a list of all tags
 function listOfAllTags() {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT * FROM Tags ORDER BY Tags.tag_name";
@@ -743,7 +757,7 @@ EOT;
 // functions
 // attach documents
 function attachDocuments($postID) {
-    $conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+    $conn = connectToDatabase();
     $targetDir = "../uploads/";
 
     foreach ($_FILES["file"]["error"] as $key => $error) {
@@ -795,7 +809,7 @@ function attachDocuments($postID) {
 // given the post id
 function listDocumentsRelatedToAPost($postID) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT document_id, document_name, document_type FROM Posts INNER JOIN Documents ON Documents.post_id = Posts.post_id WHERE Posts.post_id='".mysqli_real_escape_string($conn,$postID). "'";
@@ -829,7 +843,7 @@ function listDocumentsRelatedToAPost($postID) {
 // get document content given document id
 function getDocumentContent($id) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT document_name, document_type, document_size, document_content FROM Documents WHERE document_id='".mysqli_real_escape_string($conn,$id). "'";
@@ -860,7 +874,7 @@ function getDocumentContent($id) {
 // get users email based on post id
 function getUserEmailPostID($postID) {
 	//connecting to the database
-	$conn = new mysqli('localhost','boubou','boubou','edel') or die('Error connecting to MySQL server.');
+	$conn = connectToDatabase();
 
 	// making the querry
 	$dbQuery = "SELECT Users.user_email FROM Users INNER JOIN Posts ON Posts.user_id = Users.user_id WHERE post_id='".mysqli_real_escape_string($conn,$postID). "'";

@@ -1,4 +1,4 @@
-w3-hide-small w3-hide-medium w3-hide-medium<?php
+<?php
     $fileName = basename($_SERVER["SCRIPT_FILENAME"], '.php');
 
     function selectedMenu($fileName, $current) {

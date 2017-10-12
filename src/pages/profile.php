@@ -1,6 +1,6 @@
 <?php
-//init
 session_start();
+//init
 include  "../php/functions.php";
 
 if(!isset($_SESSION['userID']))

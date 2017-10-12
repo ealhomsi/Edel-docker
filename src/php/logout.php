@@ -9,6 +9,6 @@ include  "functions.php";
 	// logging out by swiping the session
 	unset($_SESSION['userName']);
 	unset($_SESSION['userID']);
-	header('Location: ' . 'https://localhost/new/index.php');
+	header('Location: ' . '../index.php');
     exit();
 ?>

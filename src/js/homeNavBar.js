@@ -33,7 +33,9 @@ function colorBlack() {
 }
 
 function update() {
-    if(body.scrollTop > 355.45452880859375) {
+  var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if(bodyScrollTop > 355.45452880859375) {
         NavBarthing.style.backgroundColor = "#7f3ec2";
         NavBarthing.style.opacity = "0.99";
         NavBarthing.style.color = "white";

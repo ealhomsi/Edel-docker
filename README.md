@@ -93,3 +93,45 @@ echo 'text-content' | mail -s 'subject' 'destination@mail.ca'
     a) RSS feed if necessary
     b) final touches for the phone reposivness
 
+#docker run -it  -v $PWD/src:/var/www/html/ -p80:80 -p443:443 --name edel --link edel-mysql:edel-mysql edel:3.0 /bin/bash
+
+
+--------------------------------------------------------------------------------
+# Explanation of the Project
+-- DOCKER init
+    #start the docker deamon
+    systemctl start docker.service docker.socket
+
+    #run both of the servicess
+    docker start edel-mysql edel5 
+
+    #run the apache and the email services
+    docker attach edel5
+    apachectl start
+    postfix start
+
+    #inshort
+    two dockers one mysql and the other is apache and postfix
+
+-- Overview
+    #what is this:
+    prototype of a webforum to test the idea of user contribution
+
+    #what is the general achitecture
+    the edel database has the following elements:
+        a) Users (create a ppk pair and salted hash password)
+        b) Posts (Tree Structure)
+        c) Documents (documents stored in database and signed)
+        d) Votes (upvote and downvote a post)
+        e) Tags (taging a post and grabbing posts related to a tag)
+        
+
+    #backend
+    backend is done with php and mysql
+
+    #frontend
+    front end is done with w3.css javascript 
+--------------------------------------------------------------------------------
+
+
+
