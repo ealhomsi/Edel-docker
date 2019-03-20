@@ -1,5 +1,3 @@
-# To whom it may concern
-
 # This is a copy of the project done for automated docker builds.
 
 --------------------------------------------------------------------------------
